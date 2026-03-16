@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-10T06:38:21.664748",
+  "benchmark": "HotpotQA",
+  "n_queries": 200,
+  "n_corpus": 1991,
+  "baselines": {
+    "BM25": 0.603,
+    "DPR": 0.391
+  },
+  "results": {
+    "CE baseline": {
+      "ndcg_at_10": 0.7871909257166542,
+      "recall_at_k": 0.8175,
+      "mrr": 0.9221388888888888,
+      "elapsed_s": 51.45320916175842
+    },
+    "MRAM-v1.5": {
+      "ndcg_at_10": 0.8607035380330622,
+      "recall_at_k": 0.935,
+      "mrr": 0.94475,
+      "elapsed_s": 562.2869329452515
+    },
+    "MRAM-v2 (entity)": {
+      "ndcg_at_10": 0.8636883384127233,
+      "recall_at_k": 0.94,
+      "mrr": 0.94475,
+      "elapsed_s": 721.714786529541
+    }
+  }
+}

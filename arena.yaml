@@ -1,0 +1,11 @@
+ollama:
+  base_url: http://localhost:11434
+  embed_model: nomic-embed-text
+  chat_model: qwen3.5:122b
+  embed_dimensions: 768
+
+data_dir: ./data
+results_dir: ./results
+
+top_k: 10
+n_components: 3

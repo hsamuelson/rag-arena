@@ -1,0 +1,52 @@
+{
+  "date": "2026-03-14T08:22:49.442128",
+  "goal": "Find embedder-robust technique that beats BGE+snowflake (0.4867)",
+  "n_queries": 200,
+  "seed": 42,
+  "embedders": [
+    "snowflake"
+  ],
+  "baselines": {
+    "nomic": {
+      "Flat baseline": 0.2656,
+      "CE L-12 (top-50)": 0.372,
+      "BGE-v2-m3 (top-50)": 0.3941,
+      "LI+MRAM (best composite)": 0.4148
+    },
+    "snowflake": {
+      "Flat baseline": 0.3614,
+      "CE L-12 (top-50)": 0.4475,
+      "BGE-v2-m3 (top-50)": 0.4867,
+      "LI+MRAM (best composite)": 0.4208
+    }
+  },
+  "results": {
+    "snowflake": {
+      "Exp1: CSLS Pre-Filter + CE": {
+        "ndcg_at_10": 0.3039966841599247,
+        "elapsed_s": 1585.3540081977844
+      },
+      "Exp2: LID-Gated Pool + CE": {
+        "ndcg_at_10": 0.3456506741191829,
+        "elapsed_s": 3431.7854647636414
+      },
+      "Exp3: Hub-Aware Pool + CE": {
+        "ndcg_at_10": 0.3194900407838635,
+        "elapsed_s": 3277.236374616623
+      },
+      "Exp4: Gated MRAM + CE": {
+        "ndcg_at_10": 0.36889192522971936,
+        "elapsed_s": 35783.90683436394
+      },
+      "Exp5: Cross-Model MaxSim": {
+        "ndcg_at_10": 0.3540241888787068,
+        "elapsed_s": 790.0794949531555
+      },
+      "Exp6: Routed Reranker": {
+        "ndcg_at_10": 0.35094575417671353,
+        "elapsed_s": 3666.957559108734
+      }
+    }
+  },
+  "robust_techniques": []
+}

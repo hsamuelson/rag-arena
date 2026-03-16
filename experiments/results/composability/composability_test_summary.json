@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-12T21:05:19.764071",
+  "embed_model": "Snowflake/snowflake-arctic-embed-l",
+  "n_queries": 200,
+  "note": "LI and LI+MRAM re-run with fixed model-specific prefixes",
+  "results": {
+    "Flat baseline": {
+      "ndcg_at_10": 0.3614344815949473
+    },
+    "CE L-12 (top-50)": {
+      "ndcg_at_10": 0.4475006100714421
+    },
+    "BGE-v2-m3 (top-50)": {
+      "ndcg_at_10": 0.486735095505952
+    },
+    "MRAM-v1.5": {
+      "ndcg_at_10": 0.44081140448212364
+    },
+    "MRAM + BGE": {
+      "ndcg_at_10": 0.4161822453314388
+    },
+    "Late interaction": {
+      "ndcg_at_10": 0.3601827897152895
+    },
+    "Late interaction + MRAM": {
+      "ndcg_at_10": 0.42082494268624215
+    }
+  }
+}
